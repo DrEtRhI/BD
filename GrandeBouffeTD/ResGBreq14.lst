@@ -1,0 +1,6 @@
+select nomP, max(nbI)
+       *
+ERROR at line 4:
+ORA-00937: not a single-group group function 
+
+

@@ -1,0 +1,89 @@
+LesRepas
+
+DATER     NOMI                                              
+--------- --------------------                              
+10-OCT-03 Adrian                                            
+10-OCT-03 Toto                                              
+21-OCT-03 Adrian                                            
+21-OCT-03 Marie                                             
+21-OCT-03 Myriam                                            
+21-OCT-03 Thomas                                            
+31-DEC-04 Adrian                                            
+31-DEC-04 Jacques                                           
+31-DEC-04 Malou                                             
+31-DEC-04 Marie                                             
+31-DEC-04 Patrick                                           
+31-DEC-04 Thomas                                            
+06-MAR-05 Adrian                                            
+06-MAR-05 Jackie                                            
+06-MAR-05 Marie                                             
+06-MAR-05 Phil                                              
+
+16 rows selected.
+
+LeMenu
+
+DATER     NOMP                 NOMV                         
+--------- -------------------- --------------------         
+31-DEC-04 Medaillon langouste  eau                          
+31-DEC-04 Mousse chocolat      eau                          
+31-DEC-04 Plateau fromages     eau                          
+21-OCT-03 Foie gras            Veuve Cliquot                
+21-OCT-03 Steak hache          Cote de Nuits                
+21-OCT-03 Ile flottante        eau                          
+21-OCT-03 Mousse chocolat      eau                          
+06-MAR-05 Pates beurre         Vasse Felix                  
+06-MAR-05 Mousse chocolat      Vasse Felix                  
+
+9 rows selected.
+
+LesPreferences
+
+NOMA                 NOMP                                   
+-------------------- --------------------                   
+Adrian               Foie gras                              
+Adrian               Ile flottante                          
+Adrian               Medaillon langouste                    
+Adrian               Mousse chocolat                        
+Adrian               Mousse citron                          
+Adrian               Pates beurre                           
+Adrian               Plateau fromages                       
+Adrian               Salade nicoise                         
+Adrian               Saumon                                 
+Adrian               Soupe champignons                      
+Adrian               Steak hache                            
+Jackie               Medaillon langouste                    
+Jacques              Mousse chocolat                        
+Malou                Ile flottante                          
+Malou                Mousse chocolat                        
+Malou                Mousse citron                          
+Martin               Ile flottante                          
+Patrick              Mousse chocolat                        
+Patrick              Pates beurre                           
+Patrick              Salade nicoise                         
+Phil                 Medaillon langouste                    
+Pierre               Medaillon langouste                    
+Pierre               Mousse chocolat                        
+Pierre               Soupe champignons                      
+Thomas               Mousse chocolat                        
+
+25 rows selected.
+
+LesPlats
+
+NOMP                 TYPEP                                  
+-------------------- --------------------                   
+Mousse chocolat      dessert                                
+Medaillon langouste  crustaces                              
+Soupe champignons    soupe                                  
+Pates beurre         pates                                  
+Salade nicoise       salade                                 
+Steak hache          viande                                 
+Saumon               poisson                                
+Mousse citron        dessert                                
+Plateau fromages     fromages                               
+Ile flottante        dessert                                
+Foie gras            charcuterie                            
+
+11 rows selected.
+
