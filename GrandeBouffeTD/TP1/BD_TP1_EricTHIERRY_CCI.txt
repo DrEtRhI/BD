@@ -1,0 +1,121 @@
+requête 1:
+schéma et spécification
+R1(daterR) <x> 
+SELECT daterR 
+FROM REPAS.LeMenu
+MINUS
+SELECT daterR FROM REPAS.LeMenu
+WHERE nomV <> 'eau';
+
+daterR
+---------
+31-DEC-04
+
+
+requête 2:
+SELECT DISTINCT d1.daterR
+FROM REPAS.LeMenu d1 JOIN REPAS.LeMenu d2
+on (d1.daterR = d2.daterR and d1.nomV <> d2.nomV);
+
+daterR
+---------
+21-OCT-03
+
+
+requête 3:
+With X as (SELECT min(daterR) as mindate, nomI
+FROM REPAS.lesrepas
+group by nomI)
+SELECT mindate, nomI, nomP, nomV
+FROM X LEFT OUTER JOIN REPAS.LeMenu M
+on (X.mindate = M.daterR)
+order by mindate, nomI;
+
+problème de contrainte d'intégrité référentielle pour LeMenu[daterR] = LesRepas[daterR]
+mis en avant par l'utilisation "outer JOIN" faisant figurer la date du 10-OCT-03 avec
+les attributs nomP et nomV ayant la valeur NULL
+
+MINDATE   NOMI                 nomP                 nomV
+--------- -------------------- -------------------- --------------------
+10-OCT-03 Adrian
+10-OCT-03 Toto
+21-OCT-03 Marie                Mousse chocolat      eau
+21-OCT-03 Marie                Ile flottante        eau
+21-OCT-03 Marie                Steak hache          Cote de Nuits
+21-OCT-03 Marie                Foie gras            Veuve Cliquot
+21-OCT-03 Myriam               Steak hache          Cote de Nuits
+21-OCT-03 Myriam               Mousse chocolat      eau
+21-OCT-03 Myriam               Ile flottante        eau
+21-OCT-03 Myriam               Foie gras            Veuve Cliquot
+21-OCT-03 Thomas               Mousse chocolat      eau
+21-OCT-03 Thomas               Foie gras            Veuve Cliquot
+21-OCT-03 Thomas               Steak hache          Cote de Nuits
+21-OCT-03 Thomas               Ile flottante        eau
+31-DEC-04 Jacques              Medaillon langouste  eau
+31-DEC-04 Jacques              Mousse chocolat      eau
+31-DEC-04 Jacques              Plateau FROMages     eau
+31-DEC-04 Malou                Medaillon langouste  eau
+31-DEC-04 Malou                Plateau FROMages     eau
+31-DEC-04 Malou                Mousse chocolat      eau
+31-DEC-04 Patrick              Mousse chocolat      eau
+31-DEC-04 Patrick              Medaillon langouste  eau
+31-DEC-04 Patrick              Plateau FROMages     eau
+06-MAR-05 Jackie               Mousse chocolat      Vasse Felix
+06-MAR-05 Jackie               Pates beurre         Vasse Felix
+06-MAR-05 Phil                 Mousse chocolat      Vasse Felix
+06-MAR-05 Phil                 Pates beurre         Vasse Felix
+
+27 rows SELECTed.
+
+requête 4:
+SELECT nomA
+FROM(SELECT nomA, count(nomA) as nbplatpref
+FROM REPAS.LesPreferences P JOIN (SELECT nomP
+FROM REPAS.LeMenu
+WHERE daterR = '06-MAR-05')A on (A.nomP = P.nomP)
+group by nomA)B JOIN (SELECT count(*) as nbplat
+FROM REPAS.LeMenu
+WHERE daterR = '06-MAR-05')C on (B.nbplatpref = C.nbplat);
+
+nomA
+--------------------
+Adrian
+Patrick
+
+
+
+requête 5:
+SELECT DISTINCT nomI, nbinv, nvl(nbplat, 0) as nbplat
+FROM REPAS.lesrepas natural LEFT OUTER JOIN 
+(SELECT nomI, count(daterR) as nbinv
+FROM REPAS.lesrepas
+group by nomI)R LEFT OUTER JOIN
+(SELECT nomA, count(nomP) as nbplat
+FROM REPAS.LesPreferences
+group by nomA)R1 on (nomA = nomi);
+
+NOMI                      NBINV     NBPLAT
+-------------------- ---------- ----------
+Jacques                       1          1
+Adrian                        4         11
+Patrick                       1          3
+Marie                         3          0
+Myriam                        1          0
+Malou                         1          3
+Thomas                        2          1
+Toto                          1          0
+Jackie                        1          1
+Phil                          1          1
+
+10 rows SELECTed.
+
+
+requete TD4&5
+
+requete 15:
+SELECT DISTINCT nomA
+FROM (SELECT nomA, count(typeP) as nbtypeaime
+FROM REPAS.LesPreferences Pr JOIN REPAS.LesPlats Pl on (Pr.nomP = Pl.nomP)
+group by nomA)A JOIN (SELECT count(typeP) as nbtype
+FROM REPAS.LesPlats)B on (A.nbtypeaime = B.nbtype);
+
