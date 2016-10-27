@@ -1,0 +1,451 @@
+LesVilles
+
+NOMV                 PAYS                                                       
+-------------------- --------------------                                       
+Akureyri             Islande                                                    
+Amsterdam            Hollande                                                   
+Ardara               Irlande                                                    
+Asbyrgi              Islande                                                    
+Bantry               Irlande                                                    
+Bari                 Italie                                                     
+Benevento            Italie                                                     
+Besse                France                                                     
+Briancon             France                                                     
+Brindisi             Italie                                                     
+Cap Nord             Norvege                                                    
+Capri                Italie                                                     
+Carrick              Irlande                                                    
+Caserte              Italie                                                     
+Castelo de Vide      Portugal                                                   
+Catanzaro            Italie                                                     
+Christianshab        Groenland                                                  
+Cleggan              Irlande                                                    
+Clermont Ferrand     France                                                     
+Clifden              Irlande                                                    
+Copenhague           Danemark                                                   
+Cork                 Irlande                                                    
+Cosenza              Italie                                                     
+Dingle               Irlande                                                    
+Disko                Groenland                                                  
+Donegal              Irlande                                                    
+Dublin               Irlande                                                    
+Dungloe              Irlande                                                    
+Egedesmine           Groenland                                                  
+Ennis                Irlande                                                    
+Evora                Portugal                                                   
+Faro                 Portugal                                                   
+Fatima               Portugal                                                   
+Florence             Italie                                                     
+Galway               Irlande                                                    
+Geysir               Islande                                                    
+Glengariff           Irlande                                                    
+Godafoss             Islande                                                    
+Godhavn              Groenland                                                  
+Gullfoss             Islande                                                    
+Hammerfest           Norvege                                                    
+Helsinky             Finlande                                                   
+Hoedic               France                                                     
+Holsteinborg         Groenland                                                  
+Houat                France                                                     
+Husavik              Islande                                                    
+Hveravellir          Islande                                                    
+Inari                Norvege                                                    
+Jakobshavn           Groenland                                                  
+Kenmare              Irlande                                                    
+Killarney            Irlande                                                    
+Killibegs            Irlande                                                    
+Laschamps            France                                                     
+Lecce                Italie                                                     
+Leenan               Irlande                                                    
+Leiria               Portugal                                                   
+Letterkenny          Irlande                                                    
+Lisbonne             Portugal                                                   
+Londres              Angleterre                                                 
+Louisburgh           Irlande                                                    
+Metaponto            Italie                                                     
+Myvatn               Islande                                                    
+Naples               Italie                                                     
+Orcival              France                                                     
+Paris                France                                                     
+Lyon                 France                                                     
+Pompei               Italie                                                     
+Port Cotton          France                                                     
+Port Maria           France                                                     
+Porto                Portugal                                                   
+Puy de Dome          France                                                     
+Quiberon             France                                                     
+Ravenne              Italie                                                     
+Reykholt             Islande                                                    
+Reykjavik            Islande                                                    
+Rome                 Italie                                                     
+Saarijarvi           Norvege                                                    
+St Ives              Angleterre                                                 
+Sissinghurst         Angleterre                                                 
+Exeter               Angleterre                                                 
+Bath                 Angleterre                                                 
+Salisbury            Angleterre                                                 
+Salerne              Italie                                                     
+Salla                Norvege                                                    
+Shannon              Irlande                                                    
+Sondre               Groenland                                                  
+Tornio               Norvege                                                    
+Urgeirica            Portugal                                                   
+Venise               Italie                                                     
+Verone               Italie                                                     
+Vila Real            Portugal                                                   
+Westport             Irlande                                                    
+Ylivieska            Norvege                                                    
+
+93 rows selected.
+
+LesMonuments
+
+NOMM                                NOMV                       PRIX             
+----------------------------------- -------------------- ----------             
+Tower Bridge                        Londres                      50             
+Madame Tussau                       Londres                      50             
+The Tower                           Londres                      60             
+British Museum                      Londres                      40             
+Loydd Building                      Londres                       0             
+Canals                              Amsterdam                    90             
+Medical Center                      Amsterdam                     0             
+Madurodam                           Amsterdam                   120             
+Plaza San Marco                     Venise                        0             
+Cratere du Pariou                   Puy de Dome                  20             
+Cretes du Sancy                     Puy de Dome                   0             
+Reserve ornithologique              Port Cotton                   0             
+Grotte de l'Apothicairerie          Port Cotton                  20             
+Citadelle Vauban                    Port Maria                    0             
+Elizabeth Gardens                   Sissinghurst                 15             
+Stonehenge Prehistoric Spot         Salisbury                    50             
+Roman baths                         Bath                         35             
+Palais Royal de Queluz              Lisbonne                    120             
+Monastere des Jeronimos             Lisbonne                     36             
+Chateau de Saint Georges            Lisbonne                     45             
+Monastere Cysterien d'Alcobaca      Leiria                       36             
+Cathedrale                          Porto                         0             
+Palais de la Bourse                 Porto                        90             
+Palais des Ducs de Braganda         Vila Real                   120             
+Musee Graovasco                     Urgeirica                    10             
+Universite de Santa Clara           Fatima                        0             
+Chateau des Templiers               Fatima                       20             
+Usine de Tapisseries                Evora                         0             
+Chapelle des Os                     Evora                         0             
+Maison Royale de Braganda           Evora                       120             
+Couvent Daconciecao                 Faro                         20             
+Forteresse Sagres                   Faro                          0             
+Piazza Venezia                      Rome                          0             
+La Fontaine de Trevi                Rome                          0             
+La Basilique Saint Pierre           Rome                          0             
+Le Pantheon                         Rome                         40             
+Le Colisee                          Rome                         40             
+Le Cirque de Maxime                 Rome                         40             
+Eglise Santa Maria del Fiore        Florence                      0             
+Campanile de Giotto                 Florence                     30             
+Baptistere                          Florence                     30             
+Mausolee de Galla Placidia          Ravenne                      30             
+Sant Apolinnare Nuovo               Ravenne                      30             
+Piazza de Signori                   Verone                        0             
+Casa de Capuleti                    Verone                       40             
+Piazza San Marco                    Venise                        0             
+La Basilique San Marco              Venise                       30             
+Le palais des Doges                 Venise                       30             
+Le pont des Soupirs                 Venise                        0             
+Le Grand Canal                      Venise                       40             
+Ruines                              Pompei                        0             
+Site Grec de Paestum                Cosenza                      36             
+Tombeau d'Isabelle d'Aragon         Cosenza                      50             
+Cathedrale Roccella                 Catanzaro                     0             
+Triangle de Pythagore               Metaponto                     0             
+Le Dome                             Lecce                        50             
+Basilique San Croce                 Lecce                         0             
+Basilique de San Nicolas            Bari                          0             
+Chateau de Frederic II              Bari                         80             
+Arc du Trajan                       Benevento                     0             
+Theatre                             Benevento                    50             
+Palais Royal                        Caserte                      50             
+Le Grand Serre Che                  Briancon                    145             
+Le Prorel                           Briancon                     95             
+Le Monetier les Bains               Briancon                     95             
+Serre Chevalier                     Briancon                    120             
+Puy Saint Vincent                   Briancon                    110             
+Montgenevre                         Briancon                    110             
+
+68 rows selected.
+
+LesCircuits
+
+      NUMC VDEP                 VARR                       PRIX                 
+---------- -------------------- -------------------- ----------                 
+         1 Paris                Paris                      1160                 
+         2 Paris                Paris                      1160                 
+         3 Paris                Paris                      1040                 
+         4 Paris                Paris                      1270                 
+         5 Lyon                 Lyon                       2740                 
+         6 Paris                Paris                      2520                 
+         7 Quiberon             Hoedic                     2500                 
+         8 Clermont Ferrand     Besse                      2140                 
+         9 Paris                Paris                      5700                 
+        10 Shannon              Cork                       6170                 
+        11 Shannon              Shannon                    6270                 
+        12 Dublin               Dublin                     6170                 
+        13 Paris                Paris                     18590                 
+        14 Reykjavik            Reykjavik                  7700                 
+        15 Paris                Paris                      8560                 
+        16 Paris                Paris                     10180                 
+        17 Lisbonne             Lisbonne                   3990                 
+        18 Paris                Paris                      6690                 
+        19 Rome                 Rome                      10400                 
+        21 Paris                Rome                      15000                 
+        20 Briancon             Briancon                    450                 
+
+21 rows selected.
+
+LesEtapes
+
+      NUMC       RANG VETAPE                  NBJOURS                           
+---------- ---------- -------------------- ----------                           
+         1          1 Londres                       2                           
+         2          1 Londres                       2                           
+         3          1 Amsterdam                     3                           
+         4          1 Amsterdam                     4                           
+         5          1 Venise                        5                           
+         6          1 Venise                        4                           
+         7          1 Quiberon                      2                           
+         7          2 Port Cotton                   2                           
+         7          3 Port Maria                    1                           
+         7          4 Houat                         1                           
+         7          5 Hoedic                        1                           
+         8          1 Laschamps                     2                           
+         8          2 Orcival                       3                           
+         8          3 Besse                         2                           
+         9          1 Sissinghurst                  2                           
+         9          2 Salisbury                     2                           
+         9          3 Exeter                        1                           
+         9          4 St Ives                       1                           
+         9          5 Bath                          1                           
+         9          6 Londres                       1                           
+        10          1 Shannon                       1                           
+        10          2 Dingle                        3                           
+        10          3 Killarney                     2                           
+        10          4 Kenmare                       1                           
+        10          5 Glengariff                    3                           
+        10          6 Bantry                        2                           
+        10          7 Cork                          1                           
+        11          1 Galway                        2                           
+        11          2 Clifden                       2                           
+        11          3 Cleggan                       2                           
+        11          4 Leenan                        1                           
+        11          5 Louisburgh                    2                           
+        11          6 Westport                      2                           
+        11          7 Ennis                         2                           
+        12          1 Donegal                       1                           
+        12          2 Killibegs                     2                           
+        12          3 Carrick                       2                           
+        12          4 Ardara                        2                           
+        12          5 Dungloe                       2                           
+        12          6 Letterkenny                   1                           
+        12          7 Dublin                        2                           
+        13          1 Copenhague                    4                           
+        13          2 Jakobshavn                    2                           
+        13          3 Christianshab                 2                           
+        13          4 Godhavn                       1                           
+        13          5 Disko                         2                           
+        13          6 Egedesmine                    1                           
+        13          7 Holsteinborg                  4                           
+        13          8 Sondre                        2                           
+        14          1 Reykjavik                     3                           
+        14          2 Gullfoss                      2                           
+        14          3 Geysir                        2                           
+        14          4 Hveravellir                   2                           
+        14          5 Akureyri                      2                           
+        14          6 Myvatn                        2                           
+        14          7 Asbyrgi                       2                           
+        15          1 Reykjavik                     2                           
+        15          2 Reykholt                      2                           
+        15          3 Husavik                       2                           
+        15          4 Godafoss                      2                           
+        16          1 Helsinky                      2                           
+        16          2 Ylivieska                     1                           
+        16          3 Tornio                        1                           
+        16          4 Cap Nord                      1                           
+        16          5 Hammerfest                    1                           
+        16          6 Inari                         1                           
+        16          7 Salla                         1                           
+        16          8 Saarijarvi                    2                           
+        17          1 Lisbonne                      2                           
+        17          2 Leiria                        1                           
+        17          3 Porto                         2                           
+        17          4 Vila Real                     2                           
+        17          5 Urgeirica                     1                           
+        17          6 Fatima                        2                           
+        17          7 Castelo de Vide               1                           
+        17          8 Evora                         2                           
+        17          9 Faro                          1                           
+        18          1 Rome                          3                           
+        18          2 Florence                      3                           
+        18          3 Ravenne                       2                           
+        18          4 Verone                        1                           
+        18          5 Venise                        3                           
+        19          1 Rome                          2                           
+        19          2 Naples                        1                           
+        19          3 Pompei                        1                           
+        19          4 Capri                         1                           
+        19          5 Salerne                       1                           
+        19          6 Cosenza                       2                           
+        19          7 Catanzaro                     1                           
+        19          8 Metaponto                     1                           
+        19          9 Lecce                         1                           
+        19         10 Brindisi                      1                           
+        19         11 Bari                          2                           
+        19         12 Benevento                     2                           
+        19         13 Caserte                       2                           
+        20          1 Briancon                      6                           
+        21          1 Helsinky                      2                           
+        21          2 Ylivieska                     1                           
+        21          3 Tornio                        1                           
+        21          4 Cap Nord                      1                           
+        21          5 Hammerfest                    1                           
+        21          6 Inari                         1                           
+        21          7 Salla                         1                           
+        21          8 Saarijarvi                    2                           
+        21          9 Rome                          3                           
+        21         10 Florence                      3                           
+        21         11 Ravenne                       2                           
+        21         12 Verone                        1                           
+        21         13 Venise                        3                           
+
+109 rows selected.
+
+LesProgrammations
+
+      NUMC DATEDEP     NBPLACES                                                 
+---------- --------- ----------                                                 
+         1 04-JAN-10         34                                                 
+         1 24-JUL-10         10                                                 
+         1 21-JUL-10         10                                                 
+         2 05-SEP-10         30                                                 
+         6 06-SEP-10         10                                                 
+         7 31-OCT-10         39                                                 
+        10 01-JAN-10         80                                                 
+        11 29-MAY-10         34                                                 
+        18 30-JUL-10         90                                                 
+        21 15-JAN-10         66                                                 
+         1 04-FEB-10         12                                                 
+         1 06-FEB-10         34                                                 
+         2 05-FEB-10         99                                                 
+         2 06-JAN-10          2                                                 
+         2 07-JAN-10         34                                                 
+         2 06-FEB-10         12                                                 
+         3 03-JUL-10         12                                                 
+         3 24-DEC-09         13                                                 
+         3 31-DEC-09         45                                                 
+         4 06-NOV-10         18                                                 
+         4 06-AUG-10         10                                                 
+         4 30-JUN-10         99                                                 
+         4 31-AUG-10          1                                                 
+         5 06-NOV-10         46                                                 
+         5 31-AUG-10         66                                                 
+         6 06-FEB-10         22                                                 
+         6 16-NOV-10         34                                                 
+         6 06-OCT-10         12                                                 
+         7 31-AUG-10         56                                                 
+         7 16-DEC-09         52                                                 
+         7 06-JAN-10          1                                                 
+         7 26-FEB-10          1                                                 
+         8 31-AUG-10         10                                                 
+         8 16-FEB-10         12                                                 
+         8 21-FEB-10         13                                                 
+         8 21-JUL-10         14                                                 
+         8 24-DEC-09         18                                                 
+         8 31-DEC-09         10                                                 
+         8 28-FEB-10         11                                                 
+         8 14-FEB-10          1                                                 
+         8 16-MAY-10         12                                                 
+         8 26-APR-10         31                                                 
+         8 14-NOV-10          3                                                 
+         9 06-FEB-10          3                                                 
+         9 30-OCT-10         31                                                 
+        10 21-JAN-10         45                                                 
+        10 11-FEB-10         30                                                 
+        10 28-FEB-10         22                                                 
+        11 28-FEB-10          3                                                 
+        11 06-FEB-10         13                                                 
+        11 30-JUN-10         12                                                 
+        12 06-FEB-10        190                                                 
+        13 31-MAY-10          3                                                 
+        13 30-APR-10         15                                                 
+        13 30-JUN-10         52                                                 
+        13 31-DEC-10         44                                                 
+        13 31-DEC-09         51                                                 
+        13 01-JAN-10         68                                                 
+        13 06-FEB-10         99                                                 
+        13 06-MAY-10         60                                                 
+        14 06-JUL-10         12                                                 
+        14 26-JUL-10         25                                                 
+        15 06-FEB-10         11                                                 
+        15 31-AUG-10         18                                                 
+        16 31-AUG-10         17                                                 
+        16 06-FEB-10         12                                                 
+        16 06-JAN-10          3                                                 
+        17 31-DEC-10          3                                                 
+        17 06-FEB-10          3                                                 
+        17 16-FEB-10         12                                                 
+        17 26-FEB-10         34                                                 
+        18 30-APR-10         15                                                 
+        18 06-DEC-10         12                                                 
+        18 06-OCT-10         40                                                 
+        19 06-SEP-10         20                                                 
+        19 16-SEP-10         10                                                 
+        19 05-AUG-10         12                                                 
+        19 10-DEC-10         28                                                 
+        19 20-DEC-10         11                                                 
+        19 06-FEB-10         10                                                 
+        19 15-APR-10         45                                                 
+        20 01-APR-10         13                                                 
+        20 02-FEB-10         14                                                 
+        20 22-DEC-09         18                                                 
+        20 20-JAN-10         12                                                 
+        20 27-JAN-10          5                                                 
+        20 03-APR-10         87                                                 
+        20 06-FEB-10          1                                                 
+        21 26-FEB-10         12                                                 
+        21 06-APR-10         99                                                 
+        21 25-JAN-10          3                                                 
+
+91 rows selected.
+
+LesReservations
+
+      NUMR NOMC                       NUMC DATEDEP        NBRES                 
+---------- -------------------- ---------- --------- ----------                 
+         3 Asterix                       1 04-FEB-10          4                 
+         4 Obelix                       12 06-FEB-10         78                 
+         1 Donald                       10 01-JAN-10          2                 
+         2 Picsou                        9 30-OCT-10         10                 
+         5 Ordralphabetix               20 27-JAN-10          5                 
+         6 Corto                        18 06-DEC-10         11                 
+        21 Mafalda                      19 15-APR-10         20                 
+        22 Mafalda                       5 06-NOV-10         43                 
+        23 Donald                       21 15-JAN-10         10                 
+         7 Bidochon                     13 31-DEC-09          5                 
+        13 Bonemine                     14 26-JUL-10         21                 
+        14 Nestor Burma                 12 06-FEB-10          1                 
+        15 Mafalda                      13 31-DEC-09         43                 
+        16 GrosseBaf                     4 30-JUN-10         88                 
+        17 Picsou                        8 14-FEB-10          1                 
+        18 Picsou                        1 21-JUL-10         10                 
+        19 Asterix                      21 15-JAN-10         14                 
+         8 Milou                         8 16-FEB-10          1                 
+         9 La Castafiore                 8 28-FEB-10          7                 
+        10 Milou                         2 05-FEB-10         99                 
+        11 Jerry                         3 03-JUL-10         11                 
+        12 Donald                        7 16-DEC-09         51                 
+        20 Ordralphabetix                5 31-AUG-10          2                 
+        24 Mafalda                      13 01-JAN-10          5                 
+        25 Nestor Burma                 13 01-JAN-10          5                 
+        26 Ordralphabetix               10 11-FEB-10          2                 
+        27 Nestor Burma                  2 07-JAN-10         25                 
+
+27 rows selected.
+
