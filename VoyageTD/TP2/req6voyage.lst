@@ -1,0 +1,9 @@
+Donner les noms des villes visitées par Milou et le nombre de monuments dans chaque ville (affiche les villes n'ayant pas de monuments)
+
+VETAPE               NBMONUMENT                                                 
+-------------------- ----------                                                 
+Besse                         0                                                 
+Laschamps                     0                                                 
+Londres                       5                                                 
+Orcival                       0                                                 
+

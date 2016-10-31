@@ -1,5 +1,10 @@
 spool req2voyage
-select C.numc, vdep, varr
-from agence.lescircuits C join agence.lesprogrammations P on (C.numc = P.numc)
-where datedep > '25-APR-10';
+prompt Donner le nom des clients qui ne visitent aucun monument
+select nomc
+from (select numc
+     from agence.lescircuits
+     minus
+     select numc
+     from agence.lesetapes)X
+join agence.lesreservations R on (X.numc = R.numc);
 spool off;
