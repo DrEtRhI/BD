@@ -1,7 +1,7 @@
 spool req3voyage
-prompt Donner le numéro, le nombre total de jours et le prix de base des circuits qui n'ont aucune réservation
-select C.numc, nbjour, prix
-from agence.lescircuits C join (select numc, sum(nbjours) as nbjour
+prompt 'Donner le numéro, le nombre total de jours et le prix de base des circuits qui n ont aucune réservation'
+select C.numc, totaljour, prix
+from agence.lescircuits C join (select numc, sum(nbjours) as totaljour
      from agence.lesetapes
      group by numc)A on (C.numc = A.numc) join (select numc
                           from agence.lescircuits

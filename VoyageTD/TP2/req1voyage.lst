@@ -1,48 +1,11 @@
+Donner le numéro, les villes de départ et d arrivée des ciruits qui démarrent après une date donnée.
+Donnez moi une date (jj-mm-aa) :10-DEC-10
+old   3: where datedep > '&uneDate'
+new   3: where datedep > '10-DEC-10'
 
       NUMC VDEP                 VARR                                            
 ---------- -------------------- --------------------                            
-         1 Paris                Paris                                           
-         1 Paris                Paris                                           
-         2 Paris                Paris                                           
-         3 Paris                Paris                                           
-         4 Paris                Paris                                           
-         4 Paris                Paris                                           
-         4 Paris                Paris                                           
-         4 Paris                Paris                                           
-         5 Lyon                 Lyon                                            
-         5 Lyon                 Lyon                                            
-         6 Paris                Paris                                           
-         6 Paris                Paris                                           
-         6 Paris                Paris                                           
-         7 Quiberon             Hoedic                                          
-         7 Quiberon             Hoedic                                          
-         8 Clermont Ferrand     Besse                                           
-         8 Clermont Ferrand     Besse                                           
-         8 Clermont Ferrand     Besse                                           
-         8 Clermont Ferrand     Besse                                           
-         8 Clermont Ferrand     Besse                                           
-         9 Paris                Paris                                           
-        11 Shannon              Shannon                                         
-        11 Shannon              Shannon                                         
         13 Paris                Paris                                           
-        13 Paris                Paris                                           
-        13 Paris                Paris                                           
-        13 Paris                Paris                                           
-        13 Paris                Paris                                           
-        14 Reykjavik            Reykjavik                                       
-        14 Reykjavik            Reykjavik                                       
-        15 Paris                Paris                                           
-        16 Paris                Paris                                           
         17 Lisbonne             Lisbonne                                        
-        18 Paris                Paris                                           
-        18 Paris                Paris                                           
-        18 Paris                Paris                                           
-        18 Paris                Paris                                           
         19 Rome                 Rome                                            
-        19 Rome                 Rome                                            
-        19 Rome                 Rome                                            
-        19 Rome                 Rome                                            
-        19 Rome                 Rome                                            
-
-42 rows selected.
 

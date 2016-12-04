@@ -1,7 +1,25 @@
 Donner les noms des clients qui ont réservé au moins un circuit qui passe par un pays donné
+Donnez un pays : France
+old  11: where pays = '&paysChoisi'
+new  11: where pays = 'France'
 
 NOMC                                                                            
 --------------------                                                            
+La Castafiore                                                                   
+Nestor Burma                                                                    
 Donald                                                                          
+Picsou                                                                          
+Ordralphabetix                                                                  
+Milou                                                                           
+Jerry                                                                           
+Bidochon                                                                        
 Asterix                                                                         
+Corto                                                                           
+Mafalda                                                                         
+
+NOMC                                                                            
+--------------------                                                            
+GrosseBaf                                                                       
+
+12 rows selected.
 

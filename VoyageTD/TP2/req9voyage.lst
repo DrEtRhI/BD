@@ -1,0 +1,13 @@
+Donner la liste des numéros des circuits qui passent dans toutes les villes d'un pays donné
+Entrez un nom de pays (ex: Angleterre) : Hollande
+old   4:       where pays = '&nomPays'
+new   4:       where pays = 'Hollande'
+old  14:                            where pays = '&nomPays'
+new  14:                            where pays = 'Hollande'
+select pays, numc as Numero Circuit
+                            *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> start req11voyage

@@ -1,0 +1,20 @@
+Donnez la durée maximum en jour du séjour ? : 2
+old   9: where nbJourSejour <= '&nbJourChoix'
+new   9: where nbJourSejour <= '2'
+
+NUMEROCIRCUIT       PRIX DATEDEPAR PLACEDISPO                                   
+------------- ---------- --------- ----------                                   
+            1       1160 04-JAN-10         24                                   
+            1       1160 04-JAN-10         30                                   
+            1       1160 04-FEB-10          8                                   
+            1       1160 04-FEB-10          2                                   
+            1       1160 06-FEB-10         30                                   
+            1       1160 06-FEB-10         24                                   
+            1       1160 21-JUL-10          6                                   
+            1       1160 24-JUL-10          6                                   
+            2       1160 07-JAN-10          9                                   
+            2       1160 05-FEB-10         74                                   
+            2       1160 05-SEP-10          5                                   
+
+11 rows selected.
+
