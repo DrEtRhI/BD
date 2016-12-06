@@ -1,0 +1,11 @@
+Donner un nom de pays (ex : France) : Norvege
+old   5: 			  where pays ='&nomPays')R1
+new   5: 			  where pays ='Norvege')R1
+old  16: 							   where pays = '&nomPays')R on (nbville = villeVisitee)
+new  16: 							   where pays = 'Norvege')R on (nbville = villeVisitee)
+
+      NUMC                                                                                          
+----------                                                                                          
+        16                                                                                          
+        21                                                                                          
+
