@@ -1,0 +1,59 @@
+BD Test : (Pour les TP, test fonctionnel unitaire en boite blanche en essayant de couvrir le domaine des entrées)
+
+établir une campagne de tests:
+Créer et dérouler un ensemble de tests
+	- test fonctionnel : voir si le fonctionnement de la fonction est bon
+	- test de performance : application capable de fonctionner et donner des résultats rapidement en fonction d'une forte charge.
+	- test de robustesse : si application sur plusieurs serveur, si un serveur crash voir comment se comporte l'application
+	- test de securité : voir comment ça se comporte face à une attaque
+	
+Il existe beaucoup d'autres types de tests, nous on se pose que sur les tests fonctionnels.
+
+Les tests fonctionnels sont composés de :
+	- test unitaire : test fonction par fonction pour voir si elles marchent. Pas forcément test du programme entier
+	- test modulaire : test par module
+	- test de recette : Donne à l'entrée regarde à la sortie voir si c'est bon 
+	
+Test en boite noir : programme ou fonction dont on ne connait pas le contenu, on a juste la spé qui indique les e.i et e.f
+					 En fonction des entrées attentdues, il faut établir tous les types d'entrées possibles. On essaye de couvrir le maximum
+					 de domaines des entrées.
+Test en boite blanche : on connait le contenu du programme que l'on test. Et donc on peut tester la totalité du contenu du programme. En SQL
+						c'est pas toujours évident de faire de la couverture de code.
+						
+Comment réaliser les tests :
+
+	- identifier les cas de tests ___
+									 |
+									 | un cas de la campagne	
+	- exécution des tests		  ___|
+	
+	Cas de la requête GrandeBouffe avec seulement les repas ayant de l'eau de servie
+	
+	requête :
+	select dateR
+	from LeMenu
+	where nom = 'eau'
+	minus
+	select dateR
+	from LeMenu
+	where nom != 'eau'
+	
+	Liste de cas de test à faire :
+	1) uniquement de l'eau --> date dans le résultat
+	2) eau + autre --> date absente du résultat
+	3) autre boisson --> date absente du résultat
+	
+	Créer les jeux de données pour vérifier les cas de tests :
+	La création de jeux de données est seulement à faire si un ou plusieurs cas de test ne sont pas vérifié avec les données déjà présentes
+	dans la base.
+	
+	Quand un test est validé, on dit qu'il est passant.
+	
+	jeux de données que l'on avait à disposition:
+	
+	21/03/03		eau _
+	21/03/03		eau _| vérifie le test 1)
+	25/05/03		rouge _
+	25/05/03		eau   _| vérifie le test 2)
+	28/10/03		rosé  _
+	28/10/03		rouge _| vérifie le test 3)
