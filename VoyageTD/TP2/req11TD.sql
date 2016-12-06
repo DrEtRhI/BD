@@ -12,3 +12,4 @@ FROM (SELECT numC, datedep, prix, (nbplaces - NVL(nbReserve, 0)) AS Dispo
 															   HAVING SUM(nbjours) <= choixJour)C
 ORDER BY numC, dateDep;
 spool off;															   
+
