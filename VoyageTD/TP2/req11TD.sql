@@ -9,7 +9,7 @@ FROM (SELECT numC, datedep, prix, (nbplaces - NVL(nbReserve, 0)) AS Dispo
 	  WHERE (nbplaces - NVL(nbReserve, 0)) > 0)B NATURAL JOIN (SELECT numC, SUM(nbjours) AS totaljour
 											                   FROM AGENCE.LesEtapes
 															   GROUP BY numC
-															   HAVING SUM(nbjours) <= choixJour)C
+															   HAVING SUM(nbjours) <= &choixJour)C
 ORDER BY numC, dateDep;
 spool off;															   
 
