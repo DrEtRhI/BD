@@ -78,3 +78,58 @@ natural left outer join (
 	group by Y1.numC, Y1.rang ) B
 natural join agence.LesProgrammations
 order by numC, dateDep, dateEntree;
+
+
+WITH X AS (
+	SELECT numC, rang, pays
+	FROM (
+	SELECT numC, rang, vEtape AS ville
+	FROM AGENCE.LesEtapes
+	UNION
+	SELECT numC, (rmin-1) AS rang, vDep
+	FROM AGENCE.LesCircuits
+	NATURAL JOIN ( SELECT numC, min(rang) AS rmin
+	               FROM AGENCE.LesEtapes
+	               GROUP BY numC )
+	UNION
+	SELECT numC, (rmax+1) AS rang, vArr
+	FROM AGENCE.LesCircuits
+	NATURAL JOIN ( SELECT numC, max(rang) AS rmax
+	               FROM AGENCE.LesEtapes
+	               GROUP BY numC ) )
+	JOIN AGENCE.LesVilles ON ( ville=nomV )
+	),
+     Y AS (
+	SELECT numC, rang, vEtape AS ville, nbJours
+	FROM AGENCE.LesEtapes
+	UNION
+	SELECT numC, (rmin-1) AS rang, vDep, 0 AS nbJours
+	FROM AGENCE.LesCircuits
+	NATURAL JOIN ( SELECT numC, min(rang) AS rmin
+	               FROM AGENCE.LesEtapes
+	               GROUP BY numC )
+	UNION
+	SELECT numC, (rmax+1) AS rang, vArr, 0 AS nbJours
+	FROM AGENCE.LesCircuits
+	NATURAL JOIN ( SELECT numC, max(rang) AS rmax
+	               FROM AGENCE.LesEtapes
+	               GROUP BY numC )
+	)
+SELECT numC, dateDep, pays, (dateDep+nvl(nbJ,0)) AS dateEntree
+FROM (
+	SELECT X1.numC, X1.rang, X1.pays
+	FROM ( X ) X1
+	JOIN ( X ) X2
+	ON ( X1.numC=X2.numC AND X1.pays!=X2.pays AND X2.rang=(X1.rang-1) )
+	UNION
+	SELECT numC, rang, pays
+	FROM X
+	WHERE rang=0 ) A
+NATURAL LEFT OUTER JOIN (
+	SELECT Y1.numC, Y1.rang, sum(Y2.nbJours) AS nbJ
+	FROM ( Y ) Y1
+	JOIN ( Y ) Y2
+	ON ( Y1.numC=Y2.numC AND Y1.rang>Y2.rang )
+	GROUP BY Y1.numC, Y1.rang ) B
+NATURAL JOIN AGENCE.LesProgrammations
+ORDER BY numC, dateDep, dateEntree;
