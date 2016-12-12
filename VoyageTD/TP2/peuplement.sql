@@ -2,7 +2,7 @@ drop table LesMONUMENTs ;
 drop table LesETAPEs ;
 drop table LesRESERVATIONs ;
 drop table LesPROGRAMMATIONs ;
-drop table LesCIRCUITSs ;
+drop table LesCIRCUITs ;
 drop table LesVILLEs ;
 
 
@@ -15,7 +15,7 @@ create table LesMONUMENTs (NOMM varchar(35),
         constraint fk_nomv foreign key (nomv) references LesVILLEs (nomv),
         constraint pk primary key (nomm,nomv)) ;
 
-create table LesCIRCUITSs (NumC number (3,0) primary key, 
+create table LesCIRCUITs (NumC number (3,0) primary key, 
         VDEP varchar (20), 
         VARR varchar (20), 
         PRIX number (7,2),
@@ -27,14 +27,14 @@ create table LesETAPEs (NumC number (3,0),
         Vetape varchar (20), 
         NBJours number (2,0),
         constraint clef_ce primary key (numC, rang),
-        constraint fk_nc_ce foreign key (numC) references LesCIRCUITSs (numC),
+        constraint fk_nc_ce foreign key (numC) references LesCIRCUITs (numC),
         constraint fk_vilet foreign key (vetape) references LesVILLEs (nomv)) ;
 
 create table LesPROGRAMMATIONs (NumC number (3,0), 
         DATEDEP date, 
         nbPlaces  number (3,0),
         constraint clef_cd primary key (numc, datedep),
-        constraint fk_nc_cd foreign key (numc) references LesCIRCUITSs (numc) ) ;
+        constraint fk_nc_cd foreign key (numc) references LesCIRCUITs (numc) ) ;
 
 create table LesRESERVATIONs(NumR number (4,0), 
         NOMC varchar (20), 
@@ -208,27 +208,27 @@ insert into LesMONUMENTs values ('Le Monetier les Bains','Briancon',95);
 insert into LesMONUMENTs values ('Serre Chevalier','Briancon',120);
 insert into LesMONUMENTs values ('Puy Saint Vincent','Briancon',110);
 insert into LesMONUMENTs values ('Montgenevre','Briancon',110);
-insert into LesCIRCUITSs values (1,'Paris','Paris',1160);
-insert into LesCIRCUITSs values (2,'Paris','Paris',1160);
-insert into LesCIRCUITSs values (3,'Paris','Paris',1040);
-insert into LesCIRCUITSs values (4,'Paris','Paris',1270);
-insert into LesCIRCUITSs values (5,'Lyon','Lyon',2740);
-insert into LesCIRCUITSs values (6,'Paris','Paris',2520);
-insert into LesCIRCUITSs values (7,'Quiberon','Hoedic',2500);
-insert into LesCIRCUITSs values (8,'Clermont Ferrand','Besse',2140);
-insert into LesCIRCUITSs values (9,'Paris','Paris',5700);
-insert into LesCIRCUITSs values (10,'Shannon','Cork',6170);
-insert into LesCIRCUITSs values (11,'Shannon','Shannon',6270);
-insert into LesCIRCUITSs values (12,'Dublin','Dublin',6170);
-insert into LesCIRCUITSs values (13,'Paris','Paris',18590);
-insert into LesCIRCUITSs values (14,'Reykjavik','Reykjavik',7700);
-insert into LesCIRCUITSs values (15,'Paris','Paris',8560);
-insert into LesCIRCUITSs values (16,'Paris','Paris',10180);
-insert into LesCIRCUITSs values (17,'Lisbonne','Lisbonne',3990);
-insert into LesCIRCUITSs values (18,'Paris','Paris',6690);
-insert into LesCIRCUITSs values (19,'Rome','Rome',10400);
-insert into LesCIRCUITSs values (21,'Paris','Rome',15000);
-insert into LesCIRCUITSs values (20,'Briancon','Briancon',450);
+insert into LesCIRCUITs values (1,'Paris','Paris',1160);
+insert into LesCIRCUITs values (2,'Paris','Paris',1160);
+insert into LesCIRCUITs values (3,'Paris','Paris',1040);
+insert into LesCIRCUITs values (4,'Paris','Paris',1270);
+insert into LesCIRCUITs values (5,'Lyon','Lyon',2740);
+insert into LesCIRCUITs values (6,'Paris','Paris',2520);
+insert into LesCIRCUITs values (7,'Quiberon','Hoedic',2500);
+insert into LesCIRCUITs values (8,'Clermont Ferrand','Besse',2140);
+insert into LesCIRCUITs values (9,'Paris','Paris',5700);
+insert into LesCIRCUITs values (10,'Shannon','Cork',6170);
+insert into LesCIRCUITs values (11,'Shannon','Shannon',6270);
+insert into LesCIRCUITs values (12,'Dublin','Dublin',6170);
+insert into LesCIRCUITs values (13,'Paris','Paris',18590);
+insert into LesCIRCUITs values (14,'Reykjavik','Reykjavik',7700);
+insert into LesCIRCUITs values (15,'Paris','Paris',8560);
+insert into LesCIRCUITs values (16,'Paris','Paris',10180);
+insert into LesCIRCUITs values (17,'Lisbonne','Lisbonne',3990);
+insert into LesCIRCUITs values (18,'Paris','Paris',6690);
+insert into LesCIRCUITs values (19,'Rome','Rome',10400);
+insert into LesCIRCUITs values (21,'Paris','Rome',15000);
+insert into LesCIRCUITs values (20,'Briancon','Briancon',450);
 insert into LesETAPEs values (1,1,'Londres',2);
 insert into LesETAPEs values (2,1,'Londres',2);
 insert into LesETAPEs values (3,1,'Amsterdam',3);
