@@ -4,15 +4,12 @@ WITH X AS (
 	SELECT numC, rang, vEtape AS ville, nbJours
 	FROM AGENCE.LesEtapes
 	UNION
-	SELECT numC, (rmin-1) AS rang, vDep, 0 AS nbJours
+	SELECT numC, 0 AS rang, vDep, 0 AS nbJours
 	FROM AGENCE.LesCircuits
-	NATURAL JOIN ( SELECT numC, min(rang) AS rmin
-	               FROM AGENCE.LesEtapes
-	               GROUP BY numC )
 	UNION
-	SELECT numC, (rmax+1) AS rang, vArr, 0 AS nbJours
+	SELECT numC, nvl((rmax+1),1) AS rang, vArr, 0 AS nbJours
 	FROM AGENCE.LesCircuits
-	NATURAL JOIN ( SELECT numC, max(rang) AS rmax
+	NATURAL LEFT OUTER JOIN ( SELECT numC, max(rang) AS rmax
 	               FROM AGENCE.LesEtapes
 	               GROUP BY numC ) )
 	JOIN AGENCE.LesVilles ON ( ville=nomV )
@@ -35,3 +32,4 @@ NATURAL LEFT OUTER JOIN (
 	GROUP BY Y1.numC, Y1.rang ) B
 NATURAL JOIN AGENCE.LesProgrammations
 ORDER BY numC, dateDep, dateEntree;
+
